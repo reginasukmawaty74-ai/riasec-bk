@@ -114,7 +114,9 @@ const rekapKelas = Object.values(
 
     setData(data || []);
   }
-
+useEffect(() => {
+  getData();
+}, []);
 function exportExcel() {
   const exportData = data.map((item) => ({
     Nama: item.nama,
