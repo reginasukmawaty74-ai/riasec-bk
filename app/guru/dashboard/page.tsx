@@ -48,18 +48,18 @@ const chartData = [
   { tipe: "C", jumlah: statistik.C },
 ];
 const hollandRanking = Object.entries(
-  data.reduce((acc: any, item) => {
+  data.reduce((acc: Record<string, number>, item) => {
     const code = item.holland_code || "-";
     acc[code] = (acc[code] || 0) + 1;
     return acc;
   }, {})
 )
-  .map(([code, jumlah]) => ({ code, jumlah }))
-  .sort((a: any, b: any) => b.jumlah - a.jumlah)
+  .map(([code, jumlah]) => ({
+    code,
+    jumlah: jumlah as number,
+  }))
+  .sort((a, b) => b.jumlah - a.jumlah)
   .slice(0, 10);
-  useEffect(() => {
-    getData();
-  }, []);
 
 const rekapKelas = Object.values(
   data.reduce((acc: any, item) => {
