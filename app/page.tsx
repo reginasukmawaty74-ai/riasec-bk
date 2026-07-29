@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,9 +21,14 @@ export default function Home() {
 
           <div className="mt-10 flex justify-center gap-4">
 
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition">
-              Mulai Tes
-            </button>
+           <Link
+  href="/siswa"
+<Link
+  href="/siswa"
+  className="bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition"
+>
+  Mulai Tes
+</Link>
 
             <button className="bg-gray-200 px-8 py-3 rounded-xl hover:bg-gray-300 transition">
               Pelajari
