@@ -86,45 +86,45 @@ export default function BiodataPage() {
         <div className="space-y-5">
 
           <div>
-            <label className="font-medium">Nama Lengkap</label>
+            <label className="font-medium text-gray-800">Nama Lengkap</label>
             <input
               type="text"
               value={nama}
               onChange={(e) => setNama(e.target.value)}
-              className="w-full border rounded-lg p-3 mt-1"
+              className="w-full border rounded-lg p-3 mt-1 bg-white text-gray-900 placeholder:text-gray-500"
               placeholder="Masukkan nama lengkap"
             />
           </div>
 
           <div>
-            <label className="font-medium">NIS / NISN</label>
+            <label className="font-medium text-gray-800">NIS / NISN</label>
             <input
               type="text"
               value={nis}
               onChange={(e) => setNis(e.target.value)}
-              className="w-full border rounded-lg p-3 mt-1"
+              className="w-full border rounded-lg p-3 mt-1 bg-white text-gray-900 placeholder:text-gray-500"
               placeholder="Masukkan NIS atau NISN"
             />
           </div>
 
           <div>
-            <label className="font-medium">Kelas</label>
+            <label className="font-medium text-gray-800">Kelas</label>
             <input
               type="text"
               value={kelas}
               onChange={(e) => setKelas(e.target.value)}
-              className="w-full border rounded-lg p-3 mt-1"
+              className="w-full border rounded-lg p-3 mt-1 bg-white text-gray-900 placeholder:text-gray-500"
               placeholder="Contoh: XI TMI"
             />
           </div>
 
           <div>
-            <label className="font-medium">Jurusan</label>
+            <label className="font-medium text-gray-800">Jurusan</label>
             <input
               type="text"
               value={jurusan}
               onChange={(e) => setJurusan(e.target.value)}
-              className="w-full border rounded-lg p-3 mt-1"
+              className="w-full border rounded-lg p-3 mt-1 bg-white text-gray-900 placeholder:text-gray-500"
               placeholder="Contoh: Teknik Mekanik Industri"
             />
           </div>

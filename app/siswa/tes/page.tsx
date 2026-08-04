@@ -92,9 +92,9 @@ export default function TesPage() {
           Soal {currentQuestion + 1} dari {questions.length}
         </p>
 
-        <div className="bg-gray-100 rounded-xl p-6">
+        <div className="bg-gray-100 rounded-xl p-6 text-gray-900">
 
-          <h2 className="text-xl font-semibold">
+          <h2 className="text-xl font-semibold text-gray-900">
             {soal.question}
           </h2>
 
@@ -102,28 +102,28 @@ export default function TesPage() {
 
             <button
               onClick={() => answerQuestion(1)}
-              className="w-full border rounded-lg p-3 hover:bg-blue-100"
+              className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
             >
               Sangat Tidak Sesuai
             </button>
 
             <button
               onClick={() => answerQuestion(2)}
-              className="w-full border rounded-lg p-3 hover:bg-blue-100"
+              className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
             >
               Tidak Sesuai
             </button>
 
             <button
               onClick={() => answerQuestion(3)}
-              className="w-full border rounded-lg p-3 hover:bg-blue-100"
+              className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
             >
               Sesuai
             </button>
 
             <button
               onClick={() => answerQuestion(4)}
-              className="w-full border rounded-lg p-3 hover:bg-blue-100"
+              className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
             >
               Sangat Sesuai
             </button>
