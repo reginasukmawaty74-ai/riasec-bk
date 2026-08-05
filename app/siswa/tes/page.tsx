@@ -24,6 +24,29 @@ export default function TesPage() {
     }[]
   >([]);
 
+  const options = [
+    {
+      score: 1,
+      label: "Sangat Tidak Sesuai",
+    },
+    {
+      score: 2,
+      label: "Tidak Sesuai",
+    },
+    {
+      score: 3,
+      label: "Ragu-ragu",
+    },
+    {
+      score: 4,
+      label: "Sesuai",
+    },
+    {
+      score: 5,
+      label: "Sangat Sesuai",
+    },
+  ];
+
   const answerQuestion = async (score: number) => {
     const soal = questions[currentQuestion];
 
@@ -100,33 +123,15 @@ export default function TesPage() {
 
           <div className="space-y-3 mt-6">
 
-            <button
-              onClick={() => answerQuestion(1)}
-              className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
-            >
-              Sangat Tidak Sesuai
-            </button>
-
-            <button
-              onClick={() => answerQuestion(2)}
-              className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
-            >
-              Tidak Sesuai
-            </button>
-
-            <button
-              onClick={() => answerQuestion(3)}
-              className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
-            >
-              Sesuai
-            </button>
-
-            <button
-              onClick={() => answerQuestion(4)}
-              className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
-            >
-              Sangat Sesuai
-            </button>
+            {options.map((option) => (
+              <button
+                key={option.score}
+                onClick={() => answerQuestion(option.score)}
+                className="w-full border border-gray-300 rounded-lg p-3 bg-white text-gray-900 hover:bg-blue-100 transition"
+              >
+                {option.label}
+              </button>
+            ))}
 
           </div>
 
